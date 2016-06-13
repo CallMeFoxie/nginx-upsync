@@ -1,0 +1,6 @@
+[submodule "nginx-upsync-module"]
+	path = nginx-upsync-module
+	url = https://github.com/weibocom/nginx-upsync-module.git
+[submodule "nginx-stream-upsync-module"]
+	path = nginx-stream-upsync-module
+	url = https://github.com/xiaokai-wang/nginx-stream-upsync-module.git

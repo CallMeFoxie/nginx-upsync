@@ -1,0 +1,9 @@
+have=NGX_UPSYNC . auto/have
+ngx_addon_name=ngx_upsync_module
+HTTP_MODULES="$HTTP_MODULES ngx_http_upsync_module"
+STREAM_MODULES="$STREAM_MODULES ngx_stream_upsync_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/nginx-upsync-module/src/ngx_http_upsync_module.c $ngx_addon_dir/nginx-upsync-module/src/ngx_http_json.c $ngx_addon_dir/nginx-upsync-module/src/ngx_http_parser.c $ngx_addon_dir/nginx-stream-upsync-module/src/ngx_stream_upsync_module.c"
+NGX_ADDON_DEPS="$NGX_ADDON_DEPS $ngx_addon_dir/nginx-upsync-module/src/ngx_http_upsync_module.h $ngx_addon_dir/nginx-upsync-module/src/ngx_http_json.h $ngx_addon_dir/nginx-upsync-module/src/ngx_http_parser.h $ngx_addon_dir/nginx-stream-upsync-module/src/ngx_stream_upsync_module.h"
+ngx_feature_libs="-lm"
+CORE_LIBS="$CORE_LIBS $ngx_feature_libs"
+
