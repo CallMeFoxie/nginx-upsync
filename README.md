@@ -1,3 +1,24 @@
 Sample configure call:
 
-./configure --add-module=addons/nginx-upsync --without-http_rewrite_module --without-http_gzip_module --prefix=/www/nginx/ --with-stream --without-http_uwsgi_module --without-http_scgi_module --without-http_fastcgi_module  --without-http_geo_module
+First step:
+```
+git clone https://github.com/xiaokai-wang/nginx-stream-upsync-module.git
+
+git clone https://github.com/weibocom/nginx-upsync-module.git
+
+git clone https://github.com/CallMeFoxie/nginx-upsync.git
+```
+Second step:
+```
+cp nginx-stream-upsync-module/* nginx-upsync/nginx-stream-upsync-module/
+cp nginx-upsync-module/* nginx-upsync/nginx-upsync-module/
+```
+Then:
+```
+./configure --add-module=addons/nginx-upsync --with-stream
+```
+
+Notice:
+```
+nginx be required nginx-1.9.0++
+```
